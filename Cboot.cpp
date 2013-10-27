@@ -2,7 +2,9 @@
 CBoot::CBoot(void)
   :
     m_redLed(13), m_greenLed(12),
-      m_successBoot(false)
+      m_successBoot(false), m_voltage(0),
+        m_normVoltageMin(4.90f), m_normVoltageMax(5.10f),
+          m_sensorValue(0.f)
 {
   
   
@@ -31,3 +33,14 @@ boolean CBoot::checkBootState(boolean state)
    return state;
 }
 
+boolean CBoot::checkDevices(boolean Leds[], boolean displayI2C, float actualVoltage, int actualSensorValue)
+{
+  ///Pobieramy i liczymy napięcie pinu A0
+  actualSensorValue = analogRead(A0);
+  actualVoltage = actualSensorValue * (5.0f / 1023.0f);
+  m_voltage = actualVoltage; ///Przypisanie wartości actualVoltage do m_voltage, przez co CKernel z danych skorzysta
+  
+  
+  
+  
+}
