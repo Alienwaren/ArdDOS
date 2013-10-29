@@ -2,7 +2,7 @@
 
 CSerialMonitor::CSerialMonitor(void)
   : 
-    displayed(false)
+    m_displayed(false)
 {
   
   
@@ -10,6 +10,11 @@ CSerialMonitor::CSerialMonitor(void)
 void CSerialMonitor::startSerial(int baudSpeed)
 {
   Serial.begin(baudSpeed);
+  
+}
+void CSerialMonitor::stopSerial()
+{
+  Serial.end();
   
 }
 CSerialMonitor::~CSerialMonitor(void)
@@ -33,7 +38,7 @@ void CSerialMonitor::displayText(int loopI)
 boolean CSerialMonitor::displayTextOnce(int loopI)
 {
   
-  if(displayed == false)
+  if(m_displayed == false)
   {
    for(int i = 0; i <= loopI; i++)
    {
@@ -41,7 +46,7 @@ boolean CSerialMonitor::displayTextOnce(int loopI)
         if(i == loopI)
         {
           Serial.print(" ");
-          return displayed = true;
+          return m_displayed = true;
         }
       delay(100);
       
@@ -56,4 +61,10 @@ float CSerialMonitor::displayVoltage(float actualVoltage)
  delay(100);
   
   
+}
+
+int CSerialMonitor::displayLedState(int ledState)
+{
+  Serial.println(ledState);
+  delay(100);  
 }
