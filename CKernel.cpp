@@ -22,14 +22,14 @@ boolean CKernel::startSystem()
   {
   ///Wiadomosc powitalna
   setText("Welcome to ArdDOS InDev", 25);
-  displayTextOnce();
+  displayTextOnce(25);
   setText("Booting up the System", 21);
-  displayTextOnce();
+  displayTextOnce(21);
   setText("Checking nessesary hardware...", 31);
-  displayTextOnce(); 
+  displayTextOnce(31); 
   checkDevices(&m_Leds[0], m_voltage, m_sensorValue);
   setText("Actual sensor values: ", 19);
-  displayTextOnce(); 
+  displayTextOnce(19); 
   displayVoltage(m_voltage); 
   displayLedState(m_Leds[0]);
   displayLedState(m_Leds[1]);

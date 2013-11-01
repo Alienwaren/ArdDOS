@@ -24,12 +24,12 @@ class CSerialMonitor
    ///
    ///@brief Wyświetlenie tekstu w Serial Monitorze.
    ///Wyświetla tekst bez przerwy, dziedziczy z CText, patrz m_text. Aby zachować stabilność odstęp pomiędzy wyświetleniami to 1/10s.
-   void displayText();
+   void displayText(int loopI);
    
    ///
    ///@brief Wyświetla podany tekst raz
    ///Parametrem jest wielkość tablicy, potrzebna do pętli for.
-   boolean displayTextOnce(boolean p_state);
+   boolean displayTextOnce(int loopI);
   
    boolean m_displayed;///@var Zmienna do określenia czy tekst jest wyświetlony
   
