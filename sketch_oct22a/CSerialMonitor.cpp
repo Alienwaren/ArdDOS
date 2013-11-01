@@ -22,12 +22,12 @@ CSerialMonitor::~CSerialMonitor(void)
   
   
 }
-void CSerialMonitor::displayText(int loopI)
+void CSerialMonitor::displayText()
 {
-  for(int i = 0; i <= loopI; i++)
+  for(int i = 0; i <= sizeof(m_text); i++)
  {
   Serial.print(m_text[i]);
-  if(i == loopI)
+  if(i == sizeof(m_text))
     Serial.print(" ");
   delay(100);
  } 
@@ -35,15 +35,15 @@ void CSerialMonitor::displayText(int loopI)
   
 }
 
-boolean CSerialMonitor::displayTextOnce(int loopI)
+boolean CSerialMonitor::displayTextOnce(boolean p_state)
 {
   
   if(m_displayed == false)
   {
-   for(int i = 0; i <= loopI; i++)
+   for(int i = 0; i <= sizeof(m_text); i++)
    {
       Serial.print(m_text[i]);
-        if(i == loopI)
+        if(i == sizeof(m_text))
         {
           Serial.print(" ");
           return m_displayed = true;
