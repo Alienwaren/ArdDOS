@@ -33,7 +33,7 @@ protected:
   ///
   ///@brief Sprawdza stan sprzętu, jego obecność. Zwraca boolean, który powie czy wszystko jest ok.
   ///Jego parametrami jest obecność diód (Leds[]), obecność wyświetlacza(displayI2C), napięcie pinu 5V(actualVoltage), wartość sensora analogowego(actualSensorValue) 
-  boolean checkDevices(boolean Leds[] /*boolean displayI2C*/, float actualVoltage, int actualSensorValue);
+  boolean checkDevices(boolean Leds[], boolean displayI2C, float actualVoltage, int actualSensorValue);
 
 };
 

@@ -3,12 +3,11 @@
 #include "CBoot.h"
 #include "CSerialMonitor.h"
 #include "CText.h"
-#include "CCommand.h"
 ///@class CKernel
 ///@brief Klasa odpowiada za jądro systemu, dziedziczy wszystkie elementy i zapewni przez to obsługę sprzętu
 ///Zapewnia obsługę zdarzeń, sprzętu po bootupie
 class CKernel
-  : public CBoot, public CSerialMonitor, public CCommand
+  : public CBoot, public CSerialMonitor
   {
 public:
 ///
@@ -25,10 +24,7 @@ CKernel(void);
 ///
 ///@brief Startuje system, działa w pętli void loop()
 ///
-boolean startSystem();
-
-boolean m_started; ///@var określa czy system już wystartował.
-
+void startSystem();
 void boot();
 };
 
