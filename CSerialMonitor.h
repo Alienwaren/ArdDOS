@@ -23,32 +23,18 @@ class CSerialMonitor
    void stopSerial();
    ///
    ///@brief Wyświetlenie tekstu w Serial Monitorze.
-   ///Wyświetla tekst bez przerwy, dziedziczy z CText, patrz m_text. Aby zachować stabilność odstęp pomiędzy wyświetleniami to 1/10s.
-   void displayText(int loopI);
+   ///Wyświetli podany w parametrze tekst (Tablica char), bez przerwy
+   void displayText(char toBeDisplayed[]);
    
    ///
-   ///@brief Wyświetla podany tekst raz
-   ///Parametrem jest wielkość tablicy, potrzebna do pętli for.
-   boolean displayTextOnce(int loopI);
+   ///@brief Wyświetla tekst w Serial Monitorze, po wyświetleniu całości daje odstęp
+   ///Wyświetla podany w parametrze tekst (tablica charów), po wyświetleniu całości daje odstęp
+   void displayTextEnter(char toBeDisplayed[]);
+   
+   
   
-   boolean m_displayed;///@var Zmienna do określenia czy tekst jest wyświetlony
   
-  ///
-  ///@brief Wyświetli aktualne napięcie pinu 5V
-  ///Wyświetla dane pobrane z CBoot::CheckDevices (potem dodam metodę do sprawdzenia napięcia). Odstęp dla stabilności - 1/10s
-  float displayVoltage(float actualVoltage);
-  ///
-  ///@brief Wyświetla stany Ledów
-  ///Wyświetli dane pobrane z Cboot i w przyszłości z innych klas.
-  int displayLedState(int ledState);
   
-  char m_command[25]; ///@var Tablica przechowująca komendy wiersza poleceń
-  ///
-  ///@brief Metoda do wprowadzania i przetwarzania poleceń wprowadzonych w Serial Monitorze lub za pomocą klawiatury PS/2
-  ///
-  char commandPrompt(char insetedCommand[]);
-  char displayPrompt(char displayPrompt[]);
-  char m_prompt; ///@var Zmienna przechowująca znak zachęty
 };
 
 #endif //_H_CSerialMonitor_
