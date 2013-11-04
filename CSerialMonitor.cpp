@@ -1,6 +1,11 @@
 #include "CSerialMonitor.h"
 
 CSerialMonitor::CSerialMonitor(void)
+<<<<<<< HEAD
+=======
+  : 
+    displayed(false)
+>>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
 {
   
   
@@ -23,6 +28,21 @@ void CSerialMonitor::displayText(char toBeDisplayed[])
   
   Serial.print(toBeDisplayed[i]);
   
+<<<<<<< HEAD
+=======
+  if(displayed == false)
+  {
+   for(int i = 0; i <= loopI; i++)
+   {
+      Serial.print(m_text[i]);
+        if(i == loopI)
+        {
+          Serial.print(" ");
+          return displayed = true;
+        }
+      delay(100);
+      
+>>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
  } 
 }
 void CSerialMonitor::displayTextEnter(char toBeDisplayed[])
@@ -39,5 +59,8 @@ void CSerialMonitor::displayTextEnter(char toBeDisplayed[])
     
   }
   
+<<<<<<< HEAD
  } 
+=======
+>>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
 }

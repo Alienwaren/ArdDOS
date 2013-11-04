@@ -27,6 +27,13 @@ protected:
   ///@brief Sprawdza stan bootu. Parametrem jest aktualny stan m_successBoot;
   ///
   boolean checkBootState(boolean state); 
+<<<<<<< HEAD
+=======
+  ///
+  ///@brief Sprawdza stan sprzętu, jego obecność. Zwraca boolean, który powie czy wszystko jest ok.
+  ///Jego parametrami jest obecność diód (Leds[]), obecność wyświetlacza(displayI2C), napięcie pinu 5V(actualVoltage), wartość sensora analogowego(actualSensorValue) 
+  boolean checkDevices(boolean Leds[], boolean displayI2C, float actualVoltage, int actualSensorValue);
+>>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
 
 };
 

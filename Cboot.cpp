@@ -31,3 +31,17 @@ boolean CBoot::checkBootState(boolean state)
    return state;
 }
 
+<<<<<<< HEAD
+=======
+boolean CBoot::checkDevices(boolean Leds[], boolean displayI2C, float actualVoltage, int actualSensorValue)
+{
+  ///Pobieramy i liczymy napięcie pinu A0
+  actualSensorValue = analogRead(A0);
+  actualVoltage = actualSensorValue * (5.0f / 1023.0f);
+  m_voltage = actualVoltage; ///Przypisanie wartości actualVoltage do m_voltage, przez co CKernel z danych skorzysta
+  
+  
+  
+  
+}
+>>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96

@@ -33,7 +33,16 @@ class CSerialMonitor
    
    
   
+<<<<<<< HEAD
   
+=======
+   boolean displayed;///@var Zmienna do określenia czy tekst jest wyświetlony
+  
+  ///
+  ///@brief Wyświetli aktualne napięcie pinu 5V
+  ///Wyświetla dane pobrane z CBoot::CheckDevices (potem dodam metodę do sprawdzenia napięcia). Odstęp dla stabilności - 1/10s
+  float displayVoltage(float actualVoltage);
+>>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
   
 };
 
