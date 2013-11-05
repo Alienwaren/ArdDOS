@@ -20,10 +20,12 @@ CKernel(void);
 ~CKernel(void);
 ///
 ///@brief Boot inicjuje bootup systemu, dziedziczy z CBoot
-///Dziedziczy z CBoot, wszystkie metody pobiera z ojca.
-void boot();
+///Dziedziczy z CBoot, wszystkie metody pobiera z ojca. Wywoływany w void setup();
+///
+///@brief Startuje system, działa w pętli void loop()
+///
 void startSystem();
-
+void boot();
 };
 
 

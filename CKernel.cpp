@@ -16,9 +16,10 @@ void CKernel::boot()
 }
 void CKernel::startSystem()
 {
-  setText("Damian", 5);
-  displayText(5);
-  
+  ///Wiadomosc powitalna
+  setText("Welcome to ArdDOS InDev", 25);
+  displayTextOnce(25);
+  displayVoltage(m_voltage); 
 }
 CKernel::~CKernel(void)
 {
