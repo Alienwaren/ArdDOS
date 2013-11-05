@@ -1,11 +1,8 @@
 #include "CSerialMonitor.h"
 
 CSerialMonitor::CSerialMonitor(void)
-<<<<<<< HEAD
-=======
   : 
     displayed(false)
->>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
 {
   
   
@@ -20,16 +17,22 @@ CSerialMonitor::~CSerialMonitor(void)
   
   
 }
-void CSerialMonitor::displayText(char toBeDisplayed[])
+void CSerialMonitor::displayText(int loopI)
 {
- 
- for(int i = 0; i < sizeof(toBeDisplayed); i++)
+  for(int i = 0; i <= loopI; i++)
  {
+  Serial.print(m_text[i]);
+  if(i == loopI)
+    Serial.print(" ");
+  delay(100);
+ } 
+ 
   
-  Serial.print(toBeDisplayed[i]);
+}
+
+boolean CSerialMonitor::displayTextOnce(int loopI)
+{
   
-<<<<<<< HEAD
-=======
   if(displayed == false)
   {
    for(int i = 0; i <= loopI; i++)
@@ -42,25 +45,15 @@ void CSerialMonitor::displayText(char toBeDisplayed[])
         }
       delay(100);
       
->>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
  } 
-}
-void CSerialMonitor::displayTextEnter(char toBeDisplayed[])
-{
- 
- for(int i = 0; i < sizeof(toBeDisplayed); i++)
- {
-  
-  Serial.print(toBeDisplayed[i]);
-  if(sizeof(toBeDisplayed) == i)
-  {
-    
-    Serial.println();
-    
   }
+  else
+   return 1; 
+}
+float CSerialMonitor::displayVoltage(float actualVoltage)
+{
+ Serial.println(actualVoltage);
+ delay(100);
   
-<<<<<<< HEAD
- } 
-=======
->>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
+  
 }

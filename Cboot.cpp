@@ -2,7 +2,9 @@
 CBoot::CBoot(void)
   :
     m_redLed(13), m_greenLed(12),
-      m_successBoot(false)
+      m_successBoot(false), m_voltage(0),
+        m_normVoltageMin(4.90f), m_normVoltageMax(5.10f),
+          m_sensorValue(0.f)
 {
   
   
@@ -31,8 +33,6 @@ boolean CBoot::checkBootState(boolean state)
    return state;
 }
 
-<<<<<<< HEAD
-=======
 boolean CBoot::checkDevices(boolean Leds[], boolean displayI2C, float actualVoltage, int actualSensorValue)
 {
   ///Pobieramy i liczymy napięcie pinu A0
@@ -44,4 +44,3 @@ boolean CBoot::checkDevices(boolean Leds[], boolean displayI2C, float actualVolt
   
   
 }
->>>>>>> bf6fd8c36f6ed427a40a117202768bd708f4cf96
