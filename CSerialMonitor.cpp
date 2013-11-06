@@ -50,3 +50,10 @@ boolean CSerialMonitor::displayTextOnce(int loopI)
   else
    return 1; 
 }
+float CSerialMonitor::displayVoltage(float actualVoltage)
+{
+ Serial.println(actualVoltage);
+ delay(100);
+  
+  
+}

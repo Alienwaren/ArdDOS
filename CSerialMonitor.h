@@ -31,7 +31,12 @@ class CSerialMonitor
    ///Parametrem jest wielkość tablicy, potrzebna do pętli for.
    boolean displayTextOnce(int loopI);
   
-   boolean displayed;
+   boolean displayed;///@var Zmienna do określenia czy tekst jest wyświetlony
+  
+  ///
+  ///@brief Wyświetli aktualne napięcie pinu 5V
+  ///Wyświetla dane pobrane z CBoot::CheckDevices (potem dodam metodę do sprawdzenia napięcia). Odstęp dla stabilności - 1/10s
+  float displayVoltage(float actualVoltage);
   
 };
 
