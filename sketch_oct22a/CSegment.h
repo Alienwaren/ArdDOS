@@ -66,7 +66,38 @@ class CSegment
   ///@brief Metoda zapala segment DP
   ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
   ///Jeśli stan wysoki to gasi, jeśli niski to zapali
-  void lightDP();  
+  void lightDP(); 
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się jeden
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberOne();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się Dwa
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberTwo();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się trzy
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberThree();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się cztery
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberFour();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się pięć
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberFive();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się Sześć
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberSix();
+  
 };
 
 

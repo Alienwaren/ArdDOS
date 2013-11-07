@@ -83,6 +83,54 @@ void CSegment::lightDP()
  delay(100); 
   
 }
+void CSegment::lightNumberOne()
+{
+  lightA();
+  lightC();
+}
+void CSegment::lightNumberTwo()
+{
+  lightA();
+  lightB();
+  lightG();
+  lightE();
+  lightD();
+}
+void CSegment::lightNumberThree()
+{
+  lightA();
+  lightB();
+  lightG();
+  lightC();
+  lightD(); 
+  
+}
+void CSegment::lightNumberFour()
+{
+  lightF();
+  lightG();
+  lightB();
+  lightC();
+}
+void CSegment::lightNumberFive()
+{
+  lightA();
+  lightF();
+  lightG();
+  lightC();
+  lightD();
+  
+}
+void CSegment::lightNumberSix()
+{
+  lightA();
+  lightF();
+  lightG();
+  lightC();
+  lightD();
+  lightE();
+  
+}
 CSegment::~CSegment(void)
 {
   

@@ -15,8 +15,7 @@ void CKernel::boot()
 }
 void CKernel::startSystem()
 {
-  lightA();
-  lightB();
+  lightNumberOne();
 }
 CKernel::~CKernel(void)
 {
