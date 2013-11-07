@@ -131,6 +131,48 @@ void CSegment::lightNumberSix()
   lightE();
   
 }
+void CSegment::lightNumberSeven()
+{
+  lightA();
+  lightF();
+  lightC();
+  
+}
+void CSegment::lightNumberEight()
+{
+  lightA();
+  lightF();
+  lightG();
+  lightC();
+  lightD();
+  lightE();
+  lightB();
+  
+}
+void CSegment::lightNumberNine()
+{
+  lightA();
+  lightF();
+  lightG();
+  lightB();
+  lightC();
+ 
+  
+  
+}
+void CSegment::lightNumberZero()
+{
+  lightA();
+  lightF();
+  lightG();
+  lightB();
+  lightC();
+  lightE();
+  lightD();
+ 
+  
+  
+}
 CSegment::~CSegment(void)
 {
   

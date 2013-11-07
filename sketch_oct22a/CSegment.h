@@ -97,6 +97,26 @@ class CSegment
   ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
   ///Jeśli stan wysoki to gasi, jeśli niski to zapali
   void lightNumberSix();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się siedem
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberSeven();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się osiem
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberEight();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się dziewięć
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberNine();
+  ///
+  ///@brief Metoda zapala segmenty aby wyświetliło się zero
+  ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
+  ///Jeśli stan wysoki to gasi, jeśli niski to zapali
+  void lightNumberZero();
   
 };
 
