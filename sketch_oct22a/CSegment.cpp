@@ -173,6 +173,59 @@ void CSegment::lightNumberZero()
   
   
 }
+void CSegment::lightLetterA()
+{
+  lightA();
+  lightF();
+  lightB();
+  lightG();
+  lightE();
+  lightC();
+  
+  
+}
+void CSegment::lightLetterB()
+{
+  lightG();
+  lightF();
+  lightC();
+  lightD();
+  lightE();
+  
+}
+void CSegment::lightLetterC()
+{
+  lightA();
+  lightF();
+  lightE();
+  lightD();
+  
+}
+void CSegment::lightLetterD()
+{
+  lightB();
+  lightG();
+  lightC();
+  lightD();
+  lightC();
+}
+void CSegment::lightLetterE()
+{
+  lightE();
+  lightF();
+  lightG();      
+  lightE();
+  lightD();
+}
+void CSegment::lightLetterE()
+{
+	lightA();
+	lightF();
+	lightG();
+	lightE();
+	lightDP();
+}
+
 CSegment::~CSegment(void)
 {
   

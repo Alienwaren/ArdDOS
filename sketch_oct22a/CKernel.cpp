@@ -15,7 +15,7 @@ void CKernel::boot()
 }
 void CKernel::startSystem()
 {
-  lightNumberOne();
+  lightNumberZero(); //Zero oznacza wszystko OK
 }
 CKernel::~CKernel(void)
 {
