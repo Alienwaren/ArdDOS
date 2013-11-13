@@ -27,6 +27,7 @@ void CSegment::initPins(byte p_a, byte p_b, byte p_c, byte p_d, byte p_e, byte p
   pinMode(f, OUTPUT);
   pinMode(g, OUTPUT);
   pinMode(DP, OUTPUT);
+  offAll();
 }
 void CSegment::lightA()
 {
@@ -177,7 +178,8 @@ void CSegment::lightNumberNine()
   lightG();
   lightB();
   lightC();
- 
+  offE();
+  offD();
   
   
 }
@@ -190,7 +192,8 @@ void CSegment::lightNumberZero()
   lightC();
   lightE();
   lightD();
- 
+  offG();
+  offDP();
   
   
 }
@@ -220,6 +223,9 @@ void CSegment::lightLetterC()
   lightF();
   lightE();
   lightD();
+  offB();
+  offC();
+  offG();
   
 }
 void CSegment::lightLetterD()
@@ -229,6 +235,9 @@ void CSegment::lightLetterD()
   lightC();
   lightD();
   lightC();
+  offA();
+  offF();
+  offDP();
 }
 void CSegment::lightLetterE()
 {
@@ -237,46 +246,60 @@ void CSegment::lightLetterE()
   lightG();      
   lightE();
   lightD();
+  offB();
+  offC();
+  offDP();
 }
 void CSegment::lightLetterF()
 {
-	lightA();
-	lightF();
-	lightG();
-	lightE();
-	lightDP();
+  lightA();
+  lightF();
+  lightG();
+  lightE();
+  lightDP();
+  offB();
+  offC();
+  offD();
 }
 void CSegment::offA()
 {
  digitalWrite(a, HIGH); 
+ delay(10); 
 }
 void CSegment::offB()
 {
  digitalWrite(b, HIGH); 
+ delay(10); 
 }
 void CSegment::offC()
 {
  digitalWrite(c, HIGH); 
+ delay(10); 
 }
 void CSegment::offD()
 {
  digitalWrite(d, HIGH); 
+ delay(10); 
 }
 void CSegment::offE()
 {
  digitalWrite(e, HIGH); 
+ delay(10); 
 }
 void CSegment::offF()
 {
-  digitalWrite(f, HIGH);  
+  digitalWrite(f, HIGH);
+  delay(10);   
 }
 void CSegment::offG()
 {
- digitalWrite(g, HIGH); 
+ digitalWrite(g, HIGH);
+ delay(10);  
 }
 void CSegment::offDP()
 {
-  digitalWrite(DP, HIGH); 
+  digitalWrite(DP, HIGH);
+  delay(10);  
 }
 void CSegment::lightAll()
 {
@@ -299,6 +322,45 @@ void CSegment::offAll()
   offF();
   offG();
   offDP();
+}
+void CSegment::testDisplay(int delayTime)
+{
+  offAll();
+  delay(delayTime);
+  lightA();
+  delay(delayTime);
+  lightB();
+  delay(delayTime);
+  lightC();
+  delay(delayTime);
+  lightD();
+  delay(delayTime);
+  lightE();
+  delay(delayTime);
+  lightF();
+  delay(delayTime);
+  lightG();
+  delay(delayTime);
+  lightDP();
+  delay(delayTime);
+  offA();
+  delay(delayTime);
+  offB();
+  delay(delayTime);
+  offC();
+  delay(delayTime);
+  offD();
+  delay(delayTime);
+  offE();
+  delay(delayTime);
+  offF();
+  delay(delayTime);
+  offG();
+  delay(delayTime);
+  offDP();
+  delay(delayTime);
+  lightAll();
+  delay(delayTime);
 }
 CSegment::~CSegment(void)
 {

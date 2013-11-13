@@ -27,6 +27,10 @@ CKernel(void);
 ///
 void startSystem();
 void boot();
+///
+///@brief testDevices testuje działanie sprzętu i odczytuje napięcia i porównuje je z wzorcem
+///Dziedziczy z CVoltage
+boolean testDevices();
 };
 
 

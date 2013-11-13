@@ -187,6 +187,11 @@ class CSegment
   ///@brief Metoda gasi wszystkie segmenty.
   ///
   void offAll();
+  ///
+  ///@brief Test wyświetlacza segmentowego
+  ///Metoda zapala, gasi segmenty oraz wyświetla liczby na nim
+  ///@param p_delayTime ustawi czas przerw między testami
+  void testDisplay(int p_delayTime);
 };
 
 
