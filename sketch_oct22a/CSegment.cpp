@@ -16,6 +16,7 @@ void CSegment::initPins(byte p_a, byte p_b, byte p_c, byte p_d, byte p_e, byte p
   c = p_c;
   d = p_d;
   e = p_e;
+  f = p_f;
   g = p_g;
   DP = p_DP;
   pinMode(a, OUTPUT);
@@ -31,62 +32,67 @@ void CSegment::lightA()
 {
  
  digitalWrite(a, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightB()
 {
  
  digitalWrite(b, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightC()
 {
  
  digitalWrite(c, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightD()
 {
  
  digitalWrite(d, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightE()
 {
  
  digitalWrite(e, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightF()
 {
  
  digitalWrite(f, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightG()
 {
  
  digitalWrite(g, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightDP()
 {
  
  digitalWrite(DP, LOW);
- delay(100); 
+ delay(10); 
   
 }
 void CSegment::lightNumberOne()
 {
-  lightA();
   lightC();
+  lightB();
+  offA();
+  offF();
+  offE();
+  offD();
+  offG();
 }
 void CSegment::lightNumberTwo()
 {
@@ -95,6 +101,8 @@ void CSegment::lightNumberTwo()
   lightG();
   lightE();
   lightD();
+  offB();
+  offE();
 }
 void CSegment::lightNumberThree()
 {
@@ -102,7 +110,9 @@ void CSegment::lightNumberThree()
   lightB();
   lightG();
   lightC();
-  lightD(); 
+  lightD();
+  offF();
+  offE(); 
   
 }
 void CSegment::lightNumberFour()
@@ -111,6 +121,9 @@ void CSegment::lightNumberFour()
   lightG();
   lightB();
   lightC();
+  offA();
+  offD();
+  offE();
 }
 void CSegment::lightNumberFive()
 {
@@ -119,6 +132,8 @@ void CSegment::lightNumberFive()
   lightG();
   lightC();
   lightD();
+  offB();
+  offE();
   
 }
 void CSegment::lightNumberSix()
@@ -129,6 +144,8 @@ void CSegment::lightNumberSix()
   lightC();
   lightD();
   lightE();
+  offB();
+  offA();
   
 }
 void CSegment::lightNumberSeven()
@@ -136,6 +153,10 @@ void CSegment::lightNumberSeven()
   lightA();
   lightF();
   lightC();
+  offG();
+  offF();
+  offE();
+  offD();
   
 }
 void CSegment::lightNumberEight()
@@ -217,7 +238,7 @@ void CSegment::lightLetterE()
   lightE();
   lightD();
 }
-void CSegment::lightLetterE()
+void CSegment::lightLetterF()
 {
 	lightA();
 	lightF();
@@ -225,7 +246,60 @@ void CSegment::lightLetterE()
 	lightE();
 	lightDP();
 }
-
+void CSegment::offA()
+{
+ digitalWrite(a, HIGH); 
+}
+void CSegment::offB()
+{
+ digitalWrite(b, HIGH); 
+}
+void CSegment::offC()
+{
+ digitalWrite(c, HIGH); 
+}
+void CSegment::offD()
+{
+ digitalWrite(d, HIGH); 
+}
+void CSegment::offE()
+{
+ digitalWrite(e, HIGH); 
+}
+void CSegment::offF()
+{
+  digitalWrite(f, HIGH);  
+}
+void CSegment::offG()
+{
+ digitalWrite(g, HIGH); 
+}
+void CSegment::offDP()
+{
+  digitalWrite(DP, HIGH); 
+}
+void CSegment::lightAll()
+{
+  lightA();
+  lightB();
+  lightC();
+  lightD();
+  lightE();
+  lightF();
+  lightG();
+  lightDP();
+}
+void CSegment::offAll()
+{
+  offA();
+  offB();
+  offC();
+  offD();
+  offE();
+  offF();
+  offG();
+  offDP();
+}
 CSegment::~CSegment(void)
 {
   

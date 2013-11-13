@@ -147,6 +147,46 @@ class CSegment
   ///UWAGA: metoda dostowsowana do wyświetlaczy z wspólną anodą.
   ///Jeśli stan wysoki to gasi, jeśli niski to zapali
   void lightLetterF();
+  ///
+  ///@brief Metoda zapala wszystkie segmenty
+  ///
+  void lightAll();
+  ///
+  ///@brief Metoda wyłącza segment A
+  ///
+  void offA();
+  ///
+  ///@brief Metoda wyłącza segment B
+  ///
+  void offB();
+  //
+  ///@brief Metoda wyłącza segment C
+  ///
+  void offC();
+  //
+  ///@brief Metoda wyłącza segment D
+  ///
+  void offD();
+  //
+  ///@brief Metoda wyłącza segment E
+  ///
+  void offE();
+  //
+  ///@brief Metoda wyłącza segment F
+  ///
+  void offF();
+  //
+  ///@brief Metoda wyłącza segment G
+  ///
+  void offG();
+  ///
+  ///@brief Metoda wyłącza segment DP
+  ///
+  void offDP();
+  ///
+  ///@brief Metoda gasi wszystkie segmenty.
+  ///
+  void offAll();
 };
 
 
