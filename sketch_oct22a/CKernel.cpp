@@ -16,7 +16,7 @@ void CKernel::boot()
 }
 void CKernel::startSystem()
 {
- 
+ testDisplay(1000);
 }
 CKernel::~CKernel(void)
 {

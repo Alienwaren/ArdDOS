@@ -102,8 +102,9 @@ void CSegment::lightNumberTwo()
   lightG();
   lightE();
   lightD();
-  offB();
-  offE();
+  offC();
+  offF();
+  offDP();
 }
 void CSegment::lightNumberThree()
 {
@@ -154,8 +155,8 @@ void CSegment::lightNumberSeven()
   lightA();
   lightF();
   lightC();
+  lightB();
   offG();
-  offF();
   offE();
   offD();
   
@@ -169,7 +170,7 @@ void CSegment::lightNumberEight()
   lightD();
   lightE();
   lightB();
-  
+  offDP();
 }
 void CSegment::lightNumberNine()
 {
@@ -205,7 +206,8 @@ void CSegment::lightLetterA()
   lightG();
   lightE();
   lightC();
-  
+  offD();
+  offDP();
   
 }
 void CSegment::lightLetterB()
@@ -215,7 +217,8 @@ void CSegment::lightLetterB()
   lightC();
   lightD();
   lightE();
-  
+  offB();
+  offA();
 }
 void CSegment::lightLetterC()
 {
@@ -246,6 +249,7 @@ void CSegment::lightLetterE()
   lightG();      
   lightE();
   lightD();
+  lightA();
   offB();
   offC();
   offDP();
@@ -361,6 +365,67 @@ void CSegment::testDisplay(int delayTime)
   delay(delayTime);
   lightAll();
   delay(delayTime);
+  lightA();
+  delay(delayTime);
+  offAll();
+  delay(delayTime);
+  lightB();
+  delay(delayTime);
+  offAll();
+  delay(delayTime);
+  lightC();
+  delay(delayTime);
+  offAll();
+  delay(delayTime);
+  lightD();
+  delay(delayTime);
+  offAll();
+  delay(delayTime);
+  lightE();
+  delay(delayTime);
+  offAll();
+  delay(delayTime);
+  lightF();
+  delay(delayTime);
+  offAll();
+  delay(delayTime);
+  lightDP();
+  delay(delayTime);
+  offAll();
+  delay(delayTime);
+  lightNumberOne();
+  delay(delayTime);
+  lightNumberTwo();
+  delay(delayTime);
+  lightNumberThree();
+  delay(delayTime);
+  lightNumberFour();
+  delay(delayTime);
+  lightNumberFive();
+  delay(delayTime);
+  lightNumberSix();
+  delay(delayTime);
+  lightNumberSeven();
+  delay(delayTime);
+  lightNumberEight();
+  delay(delayTime);
+  lightNumberNine();
+  delay(delayTime);
+  lightNumberZero();
+  delay(delayTime);
+  lightLetterA();
+  delay(delayTime);
+  lightLetterB();
+  delay(delayTime);
+  lightLetterC();
+  delay(delayTime);
+  lightLetterD();
+  delay(delayTime);
+  lightLetterE();
+  delay(delayTime);
+  lightLetterF();
+  delay(delayTime);
+  
 }
 CSegment::~CSegment(void)
 {
