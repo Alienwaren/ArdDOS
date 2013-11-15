@@ -4,11 +4,12 @@
 #include "CSerialMonitor.h"
 #include "CText.h"
 #include "CSegment.h"
+#include "CVoltageUtilities.h"
 ///@class CKernel
 ///@brief Klasa odpowiada za jądro systemu, dziedziczy wszystkie elementy i zapewni przez to obsługę sprzętu
 ///Zapewnia obsługę zdarzeń, sprzętu po bootupie
 class CKernel
-  : public CBoot, public CSerialMonitor, public CSegment
+  : public CBoot, public CSerialMonitor, public CSegment, public CVoltageUtilities
   {
 public:
 ///
