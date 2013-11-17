@@ -1,5 +1,4 @@
 #include "CKernel.h"
-
 CKernel::CKernel(void)
 {
 
@@ -10,16 +9,14 @@ CKernel::CKernel(void)
 void CKernel::boot()
 {
   bootUp();
-  startSerial(9600);
+  startSerial(9600); // komunikacja szeregowa
+  initPins(13,12,11,10,9,8,7,6); //Inicjacje wyświetlacza segmentowego/(a,b,c,d,e,f,g,DP)
   
   
 }
 void CKernel::startSystem()
 {
-  ///Wiadomosc powitalna
-  setText("Welcome to ArdDOS InDev", 25);
-  displayTextOnce(25);
-  displayVoltage(m_voltage); 
+ testDisplay(1000);
 }
 CKernel::~CKernel(void)
 {
